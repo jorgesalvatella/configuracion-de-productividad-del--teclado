@@ -88,12 +88,10 @@ if ! grep -q "neofetch" "$HOME/.bashrc"; then
     echo "neofetch" >> "$HOME/.bashrc"
 fi
 
-# 1️⃣ Registrar el atajo en la lista global (esto es lo que faltaba)
-dconf write /org/gnome/settings-daemon/plugins-media-keys/custom-keybindings "['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/']"
-
-# 2️⃣ Definir el atajo personalizado
+# 8. Atajo personalizado para abrir wofi (Super + Espacio)
+dconf write /org/gnome/settings-daemon/plugins/media-keys/custom-keybindings "['/org/gnome/settings-daemon/plugins/media-keys/custom0/']"
 dconf write /org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/name "'Abrir wofi'"
-dconf write /org/gnome/settings-daemon/plugins-media-keys/custom-keybindings/custom0/command "'wofi --show drun'"
+dconf write /org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/command "'wofi --show drun'"
 dconf write /org/gnome/settings-daemon/plugins-media-keys/custom-keybindings/custom0/binding "'<Super>space'"
 
 # 9. Tiling básico (ventanas divididas)
@@ -105,14 +103,13 @@ dconf write /org/gnome/desktop/wm/keybindings/unmaximize "['<Super>Down']"
 # 10. Cambiar idioma teclado (opcional)
 dconf write /org/gnome/desktop/input-sources/xkb-options "['grp:win_space_toggle']"
 
-
-# 9.1 Atajos adicionales - Cambiar foco entre ventanas sin moverlas
-dconf write /org/gnome/desktop/wm/keybindings/switch-to-workspace-left "['<Super><Alt>Left']"
-dconf write /org/gnome/desktop/wm/keybindings/switch-to-workspace-right "['<Super><Alt>Right']"
+# 11. Cambiar foco entre ventanas sin moverlas (Super + Ctrl + Left/Right)
+dconf write /org/gnome/desktop/wm/keybindings/switch-applications "['<Super><Ctrl>Tab']"
+dconf write /org/gnome/desktop/wm/keybindings/switch-applications-backward "['<Super><Ctrl><Shift>Tab']"
 
 echo "✅ Atajos adicionales configurados:"
-echo "   Super + Alt + Left  = Cambiar foco a ventana izquierda"
-echo "   Super + Alt + Right = Cambiar foco a ventana derecha"
+echo "   Super + Ctrl + Tab         = Cambiar foco a la siguiente ventana (circular)"
+echo "   Super + Ctrl + Shift + Tab = Cambiar foco a la ventana anterior (circular)"
 
 # Final
 echo "✅ Configuración completa (100% Wayland Friendly)"

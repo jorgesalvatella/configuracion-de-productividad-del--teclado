@@ -1,4 +1,3 @@
-cat > setup_teclado_pro_wayland_estetico.sh << 'EOF'
 #!/bin/bash
 
 set -e
@@ -15,9 +14,9 @@ sudo apt install -y wofi gnome-shell-extensions gnome-shell-extension-manager \
 # 3. Configurar fuentes globales - Todo Avant Garde tamaño 13
 echo "🖋️ Configurando fuentes globales a ITC Avant Garde Gothic Std 13"
 
-gsettings set org.gnome.desktop.interface font-name 'ITC Avant Garde Gothic Std 13'
-gsettings set org.gnome.desktop.interface document-font-name 'ITC Avant Garde Gothic Std 13'
-gsettings set org.gnome.desktop.interface monospace-font-name 'ITC Avant Garde Gothic Std 13'
+gsettings set org.gnome.desktop.interface font-name 'ITC Avant Garde Gothic Std 12'
+gsettings set org.gnome.desktop.interface document-font-name 'ITC Avant Garde Gothic Std 12'
+gsettings set org.gnome.desktop.interface monospace-font-name 'ITC Avant Garde Gothic Std 12'
 
 echo "✅ Fuentes configuradas: ITC Avant Garde Gothic Std 13 en todo el sistema"
 
@@ -110,4 +109,3 @@ echo "⚡ Tema: Yaru Dark"
 echo "🌄 Fondo de pantalla: Tecnológico oscuro"
 echo "💻 Lanzador: wofi (Super + Espacio)"
 echo "🔥 Terminal: Starship + Neofetch"
-EOF

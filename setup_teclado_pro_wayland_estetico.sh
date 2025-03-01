@@ -88,11 +88,13 @@ if ! grep -q "neofetch" "$HOME/.bashrc"; then
     echo "neofetch" >> "$HOME/.bashrc"
 fi
 
-# 8. Atajos de teclado (con wofi)
-dconf write /org/gnome/settings-daemon/plugins/media-keys/custom-keybindings "['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/']"
+# 1️⃣ Registrar el atajo en la lista global (esto es lo que faltaba)
+dconf write /org/gnome/settings-daemon/plugins-media-keys/custom-keybindings "['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/']"
+
+# 2️⃣ Definir el atajo personalizado
 dconf write /org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/name "'Abrir wofi'"
-dconf write /org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/command "'wofi --show drun'"
-dconf write /org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/binding "'<Super>space'"
+dconf write /org/gnome/settings-daemon/plugins-media-keys/custom-keybindings/custom0/command "'wofi --show drun'"
+dconf write /org/gnome/settings-daemon/plugins-media-keys/custom-keybindings/custom0/binding "'<Super>space'"
 
 # 9. Tiling básico (ventanas divididas)
 dconf write /org/gnome/desktop/wm/keybindings/tile-left "['<Super>Left']"

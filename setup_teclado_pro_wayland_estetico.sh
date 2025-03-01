@@ -105,6 +105,15 @@ dconf write /org/gnome/desktop/wm/keybindings/unmaximize "['<Super>Down']"
 # 10. Cambiar idioma teclado (opcional)
 dconf write /org/gnome/desktop/input-sources/xkb-options "['grp:win_space_toggle']"
 
+
+# 9.1 Atajos adicionales - Cambiar foco entre ventanas sin moverlas
+dconf write /org/gnome/desktop/wm/keybindings/switch-to-workspace-left "['<Super><Alt>Left']"
+dconf write /org/gnome/desktop/wm/keybindings/switch-to-workspace-right "['<Super><Alt>Right']"
+
+echo "✅ Atajos adicionales configurados:"
+echo "   Super + Alt + Left  = Cambiar foco a ventana izquierda"
+echo "   Super + Alt + Right = Cambiar foco a ventana derecha"
+
 # Final
 echo "✅ Configuración completa (100% Wayland Friendly)"
 echo "✅ Fuentes configuradas: ITC Avant Garde Gothic Std 12"

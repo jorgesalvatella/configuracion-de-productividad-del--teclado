@@ -11,14 +11,14 @@ sudo apt update && sudo apt upgrade -y
 sudo apt install -y wofi gnome-shell-extensions gnome-shell-extension-manager \
                     gnome-tweaks curl unzip
 
-# 3. Configurar fuentes globales - Todo Avant Garde tamaño 13
-echo "🖋️ Configurando fuentes globales a ITC Avant Garde Gothic Std 13"
+# 3. Configurar fuentes globales - Todo Avant Garde tamaño 12
+echo "🖋️ Configurando fuentes globales a ITC Avant Garde Gothic Std 12"
 
 gsettings set org.gnome.desktop.interface font-name 'ITC Avant Garde Gothic Std 12'
 gsettings set org.gnome.desktop.interface document-font-name 'ITC Avant Garde Gothic Std 12'
 gsettings set org.gnome.desktop.interface monospace-font-name 'ITC Avant Garde Gothic Std 12'
 
-echo "✅ Fuentes configuradas: ITC Avant Garde Gothic Std 13 en todo el sistema"
+echo "✅ Fuentes configuradas: ITC Avant Garde Gothic Std 12 en todo el sistema"
 
 # 4. Configurar tema oscuro Yaru
 gsettings set org.gnome.desktop.interface gtk-theme 'Yaru-dark'
@@ -104,7 +104,7 @@ dconf write /org/gnome/desktop/input-sources/xkb-options "['grp:win_space_toggle
 
 # Final
 echo "✅ Configuración completa (100% Wayland Friendly)"
-echo "✅ Fuentes configuradas: ITC Avant Garde Gothic Std 13"
+echo "✅ Fuentes configuradas: ITC Avant Garde Gothic Std 12"
 echo "⚡ Tema: Yaru Dark"
 echo "🌄 Fondo de pantalla: Tecnológico oscuro"
 echo "💻 Lanzador: wofi (Super + Espacio)"

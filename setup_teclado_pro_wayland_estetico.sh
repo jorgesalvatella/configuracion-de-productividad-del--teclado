@@ -11,8 +11,8 @@ sudo apt update && sudo apt upgrade -y
 sudo apt install -y wofi gnome-shell-extensions gnome-shell-extension-manager \
                     gnome-tweaks curl unzip
 
-# 3. Configurar fuentes globales - Todo Avant Garde tamaño 13
-echo "🖋️ Configurando fuentes globales a ITC Avant Garde Gothic Std 13"
+# 3. Configurar fuentes globales - Todo Avant Garde tamaño 12
+echo "🖋️ Configurando fuentes globales a ITC Avant Garde Gothic Std 12"
 
 gsettings set org.gnome.desktop.interface font-name 'ITC Avant Garde Gothic Std 12'
 gsettings set org.gnome.desktop.interface document-font-name 'ITC Avant Garde Gothic Std 12'

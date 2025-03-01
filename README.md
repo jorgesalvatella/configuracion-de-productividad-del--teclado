@@ -16,3 +16,12 @@ git clone https://github.com/jorgesalvatella/configuracion-de-productividad-del-
 cd configuracion-de-productividad-del--teclado
 chmod +x setup_teclado_pro_wayland_estetico.sh
 ./setup_teclado_pro_wayland_estetico.sh
+
+---
+## 📥 Instalación rápida (One-liner)
+
+Si quieres instalar todo directamente sin clonar el repo manualmente, ejecuta este comando en tu terminal:
+
+```bash
+bash <(curl -s https://raw.githubusercontent.com/jorgesalvatella/configuracion-de-productividad-del--teclado/main/setup_teclado_pro_wayland_estetico.sh)
+

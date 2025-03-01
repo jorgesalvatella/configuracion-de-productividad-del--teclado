@@ -103,13 +103,13 @@ dconf write /org/gnome/desktop/wm/keybindings/unmaximize "['<Super>Down']"
 # 10. Cambiar idioma teclado (opcional)
 dconf write /org/gnome/desktop/input-sources/xkb-options "['grp:win_space_toggle']"
 
-# 11. Cambiar foco entre ventanas sin moverlas (Super + Tab y Super + Shift + Tab)
-dconf write /org/gnome/desktop/wm/keybindings/switch-applications "['<Super>Tab']"
-dconf write /org/gnome/desktop/wm/keybindings/switch-applications-backward "['<Super><Shift>Tab']"
+# 11. Cambiar foco entre ventanas (en orden de apertura) - Super + 0 + Left/Right
+dconf write /org/gnome/desktop/wm/keybindings/cycle-windows "['<Super>0+Right']"
+dconf write /org/gnome/desktop/wm/keybindings/cycle-windows-backward "['<Super>0+Left']"
 
 echo "✅ Atajos adicionales configurados:"
-echo "   Super + Tab         = Cambiar foco a la siguiente ventana"
-echo "   Super + Shift + Tab = Cambiar foco a la ventana anterior"
+echo "   Super + 0 + Right  = Foco a siguiente ventana"
+echo "   Super + 0 + Left   = Foco a ventana anterior"
 
 # Final
 echo "✅ Configuración completa (100% Wayland Friendly)"
